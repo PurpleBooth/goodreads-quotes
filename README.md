@@ -15,3 +15,21 @@ Get a random quote from random categories in goodreads. Written in about 10min o
   ARGS:
       <tag>...    Goodreads tag
 ```
+
+## Installing
+
+First tap my homebrew repo
+
+``` shell
+brew tap PurpleBooth/repo
+```
+
+Next install the binary
+
+``` shell
+brew install PurpleBooth/repo/goodreads-quotes
+```
+
+You can also download the [latest
+release](https://github.com/PurpleBooth/goodreads-quotes/releases/latest)
+and run it.
