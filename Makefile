@@ -16,7 +16,7 @@ test:
 .PHONY: build
 ## Build a release copy
 build:
-	cargo build --release
+	cargo build --release --locked
 
 .PHONY: lint
 ## Lint it
