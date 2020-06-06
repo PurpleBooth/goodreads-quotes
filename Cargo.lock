@@ -622,7 +622,7 @@ checksum = "bcc8e0c9bce37868955864dbecd2b1ab2bdf967e6f28066d65aaac620444b65c"
 
 [[package]]
 name = "goodreads-quotes"
-version = "0.13.0"
+version = "0.14.0"
 dependencies = [
  "clap",
  "directories-next",
@@ -1116,9 +1116,9 @@ checksum = "77af24da69f9d9341038eba93a073b1fdaaa1b788221b00a69bce9e762cb32de"
 
 [[package]]
 name = "openssl-sys"
-version = "0.9.57"
+version = "0.9.58"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7410fef80af8ac071d4f63755c0ab89ac3df0fd1ea91f1d1f37cf5cec4395990"
+checksum = "a842db4709b604f0fe5d1170ae3565899be2ad3d9cbc72dedc789ac0511f78de"
 dependencies = [
  "autocfg 1.0.0",
  "cc",
@@ -1855,9 +1855,9 @@ dependencies = [
 
 [[package]]
 name = "sqlite3-src"
-version = "0.2.11"
+version = "0.2.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ca2f31fb15612f7f665c76a07cf64ac5855ddb655198b2f6e5cd950519c2f6de"
+checksum = "b8bb25e66d026488228a97e0ad21e3d15ec5998dcd9ad73c97cc277c56a6b314"
 dependencies = [
  "cc",
  "pkg-config",
