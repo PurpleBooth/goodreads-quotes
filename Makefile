@@ -19,7 +19,7 @@ build:
 	cargo build --release --locked
 
 .PHONY: lint
-## Lint it
+## Run static analysis tests
 lint:
 	cargo fmt --all -- --check
 	cargo clippy --all-targets --all-features -- -D warnings -Dclippy::all -Dclippy::pedantic
