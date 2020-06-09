@@ -140,8 +140,8 @@ jobs:
         run: |
           git add . && git stash || true
           git checkout -b temp
-          git rebase origin/master
-          git checkout master
+          git rebase origin/main
+          git checkout main
           git merge --ff-only -
           if [ "$(git stash list)" != "" ] ; then
             git stash pop
