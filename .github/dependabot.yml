@@ -20,4 +20,4 @@ updates:
   labels:
     - dependencies
     - rust
-    - "merge when green"
+    - "automerge"
