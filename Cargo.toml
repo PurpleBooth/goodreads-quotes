@@ -1,6 +1,6 @@
 [package]
 name = "goodreads-quotes"
-version = "0.35.0"
+version = "0.36.0"
 authors = ["Billie Thompson <billie@billiecodes.com>"]
 edition = "2018"
 description = "Pull random quotes from goodreads"
