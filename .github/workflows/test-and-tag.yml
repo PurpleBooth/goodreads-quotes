@@ -77,7 +77,7 @@ jobs:
           command: clippy
           args: '--all-targets --all-features -- -D warnings -Dclippy::style -D clippy::pedantic -D clippy::cargo'
   merge-and-push:
-    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]' || ( github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'Release v') )
+    if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'Release v')
     needs:
       - test
       - lints
@@ -133,21 +133,6 @@ jobs:
         run: |
           git config user.name "GitHub"
           git config user.email "noreply@github.com"
-
-          git fetch
-      - shell: bash
-        if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
-        run: |
-          git add . && git stash || true
-          git checkout -b temp
-          git rebase origin/main
-          git checkout main
-          git merge --ff-only -
-          if [ "$(git stash list)" != "" ] ; then
-            git stash pop
-          fi
-      - shell: bash
-        run: |
           git commit -am "Release $(cat ./version/version)"
           git tag -a -m "Release $(cat ./version/version)" "$(cat ./version/version)"
           git pull --rebase
