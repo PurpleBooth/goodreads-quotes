@@ -2,6 +2,7 @@
   push:
     tags:
       - "*"
+name: update-tap
 jobs:
   generate-formula:
     runs-on: ubuntu-latest
