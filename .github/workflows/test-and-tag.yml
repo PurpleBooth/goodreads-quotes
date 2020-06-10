@@ -3,6 +3,9 @@
     branches:
       - '*'
   pull_request: null
+    
+name: test-and-tag
+
 jobs:
   check:
     runs-on: ubuntu-latest
