@@ -150,7 +150,7 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           github_token: '${{ secrets.COMMITTER_TOKEN }}'
-          pr_label: "automerge"
+          pr_label: "releases"
           destination_branch: "main"
           source_branch: "release-${{ steps.get_version.outputs.VERSION }}"
 
