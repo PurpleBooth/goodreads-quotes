@@ -5,6 +5,10 @@ updates:
   schedule:
     interval: daily
   open-pull-requests-limit: 10
+  labels:
+    - dependencies
+    - github-actions
+    - "merge when green"
 - package-ecosystem: cargo
   directory: "/"
   schedule:
@@ -13,3 +17,7 @@ updates:
   allow:
   - dependency-type: direct
   - dependency-type: indirect
+  labels:
+    - dependencies
+    - rust
+    - "merge when green"
