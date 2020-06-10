@@ -1,0 +1,7 @@
+requiredChecks:
+  - autoupdate 
+  - check
+  - lints
+  - test
+  
+ mergeMethod: rebase
