@@ -34,7 +34,7 @@ jobs:
           GITHUB_TOKEN: "${{ secrets.COMMITTER_TOKEN }}"
           MERGE_METHOD: rebase 
           MERGE_LABELS: dependencies 
-          MERGE_RETRY_SLEEP: "600000"  
+          MERGE_RETRY_SLEEP: "300000"  
   automerge-label:
     runs-on: ubuntu-latest
     steps:
@@ -43,4 +43,4 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.COMMITTER_TOKEN }}"
           MERGE_METHOD: rebase
-          MERGE_RETRY_SLEEP: "600000"
+          MERGE_RETRY_SLEEP: "300000"
