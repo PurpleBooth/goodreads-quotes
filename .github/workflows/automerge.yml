@@ -35,4 +35,3 @@ jobs:
         env:
           GITHUB_TOKEN: "${{ secrets.COMMITTER_TOKEN }}"
           MERGE_METHOD: rebase 
-          MERGE_LABELS: automerge 
