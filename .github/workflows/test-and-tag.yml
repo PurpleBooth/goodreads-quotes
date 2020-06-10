@@ -138,6 +138,12 @@ jobs:
           git config user.email "noreply@github.com"
           git commit -am "Release $(cat ./version/version)"
           git tag -a -m "Release $(cat ./version/version)" "$(cat ./version/version)"
-          git pull --rebase
-          git push
           git push --tags
+          
+          git checkout -b "release-$(cat ./version/version)"
+          git push -f origin "$(cat ./version/version)"
+      - name: pull-request
+        uses: repo-sync/pull-request@v2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_label: "automerge"  
