@@ -145,7 +145,7 @@ jobs:
           git push --tags
           
           git checkout -b "release-$(cat ./version/version)"
-          git push -f origin "$(cat ./version/version)"
+          git push -f origin "release-$(cat ./version/version)"
       - name: pull-request
         uses: repo-sync/pull-request@v2
         with:
