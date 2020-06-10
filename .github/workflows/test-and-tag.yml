@@ -146,4 +146,5 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           github_token: '${{ secrets.COMMITTER_TOKEN }}'
-          pr_label: "automerge"  
+          pr_label: "automerge"
+          destination_branch: "main"
