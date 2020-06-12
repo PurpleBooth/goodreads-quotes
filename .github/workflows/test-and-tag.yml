@@ -78,7 +78,7 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: '--all-targets --all-features -- -D warnings -Dclippy::style -D clippy::pedantic -D clippy::cargo -A clippy::multiple-crate-versions'
+          args: '--all-targets --all-features -- -D warnings -Dclippy::all -D clippy::pedantic -D clippy::cargo -A clippy::multiple-crate-versions'
   merge-and-push:
     if: github.ref == 'refs/heads/main' && !contains(github.event.head_commit.message, 'Release v')
     needs:
