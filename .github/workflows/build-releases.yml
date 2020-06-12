@@ -24,7 +24,7 @@ jobs:
         with:
           default: true
           profile: minimal
-          toolchain: nightly
+          toolchain: stable
       -
         uses: actions-rs/cargo@v1
         with:
@@ -79,7 +79,7 @@ jobs:
         with:
           default: true
           profile: minimal
-          toolchain: nightly
+          toolchain: stable
       -
         uses: actions-rs/cargo@v1
         with:
