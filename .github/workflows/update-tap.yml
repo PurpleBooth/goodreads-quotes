@@ -144,8 +144,9 @@ jobs:
       - shell: bash
         run: |
           cd "$(brew --repo)/Library/Taps/purplebooth/homebrew-repo"
-          git checkout -b "$REPOSITORY_NAME-$(echo $GIT_TAG | sed 's/^refs\/tags\///')-bottle"
-          git fetch && git rebase origin/main
+          git checkout -b "$REPOSITORY_NAME-$(echo $GIT_TAG | sed 's/^refs\/tags\///')"
+          git reset --soft HEAD~1
+          git commit --amend -C HEAD
           git push -f origin "$REPOSITORY_NAME-$(echo $GIT_TAG | sed 's/^refs\/tags\///')"
           brew install github/gh/gh
           gh pr create --label bottles --base main --fill
