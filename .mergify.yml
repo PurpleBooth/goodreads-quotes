@@ -1,0 +1,46 @@
+pull_request_rules:
+  - name: automatic squash merge for main when tests pass
+    conditions:
+      - status-success=security-audit
+      - status-success=check
+      - status-success=lints
+      - status-success=version
+      - status-success=test (macos-latest, echo nothing-to-install)
+      - status-success=test (ubuntu-latest, sudo apt-get install -y libxcb-shape0-dev libxcb-xfixes0-dev)
+      - status-success=test (windows-latest, echo nothing-to-install)
+      - base=main
+      - label=automerge-squash
+    actions:
+      merge:
+        strict: smart+fasttrack
+        method: squash
+  - name: automatic rebase for main when tests pass
+    conditions:
+      - status-success=security-audit
+      - status-success=check
+      - status-success=lints
+      - status-success=version
+      - status-success=test (macos-latest, echo nothing-to-install)
+      - status-success=test (ubuntu-latest, sudo apt-get install -y libxcb-shape0-dev libxcb-xfixes0-dev)
+      - status-success=test (windows-latest, echo nothing-to-install)
+      - base=main
+      - label=automerge-rebase
+    actions:
+      merge:
+        strict: smart+fasttrack
+        method: rebase
+  - name: automatic rebase for releases
+    conditions:
+      - status-success=security-audit
+      - status-success=check
+      - status-success=lints
+      - status-success=version
+      - status-success=test (macos-latest, echo nothing-to-install)
+      - status-success=test (ubuntu-latest, sudo apt-get install -y libxcb-shape0-dev libxcb-xfixes0-dev)
+      - status-success=test (windows-latest, echo nothing-to-install)
+      - base=main
+      - label=releases
+    actions:
+      merge:
+        strict: smart+fasttrack
+        method: rebase
