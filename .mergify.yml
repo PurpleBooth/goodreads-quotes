@@ -44,3 +44,18 @@ pull_request_rules:
       merge:
         strict: smart+fasttrack
         method: rebase
+  - name: automatic rebase for dependencies
+    conditions:
+      - status-success=security-audit
+      - status-success=check
+      - status-success=lints
+      - status-success=version
+      - status-success=test (macos-latest, echo nothing-to-install)
+      - status-success=test (ubuntu-latest, sudo apt-get install -y libxcb-shape0-dev libxcb-xfixes0-dev)
+      - status-success=test (windows-latest, echo nothing-to-install)
+      - base=main
+      - label=dependencies
+    actions:
+      merge:
+        strict: smart+fasttrack
+        method: merge
