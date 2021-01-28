@@ -637,7 +637,7 @@ checksum = "f6503fe142514ca4799d4c26297c4248239fe8838d827db6bd6065c6ed29a6ce"
 
 [[package]]
 name = "goodreads-quotes"
-version = "0.86.16"
+version = "0.86.25"
 dependencies = [
  "clap",
  "directories-next",
