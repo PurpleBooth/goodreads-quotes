@@ -35,7 +35,7 @@ jobs:
           ~/.cargo/bin
           target
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-    - uses: actions-rs/toolchain@v1
+    - uses: actions-rs/toolchain@v1.0.7
       with:
         profile: minimal
         toolchain: stable
@@ -67,7 +67,7 @@ jobs:
           ~/.cargo/bin
           target
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-    - uses: actions-rs/toolchain@v1
+    - uses: actions-rs/toolchain@v1.0.7
       with:
         profile: minimal
         toolchain: stable
@@ -88,7 +88,7 @@ jobs:
           ~/.cargo/bin
           target
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-    - uses: actions-rs/toolchain@v1
+    - uses: actions-rs/toolchain@v1.0.7
       with:
         profile: minimal
         toolchain: stable
