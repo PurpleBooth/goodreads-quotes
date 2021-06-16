@@ -4,7 +4,6 @@ queue_rules:
     - status-success=security-audit
     - status-success=check
     - status-success=lints
-    - status-success=version
     - status-success=test (macos-latest, echo nothing-to-install)
     - status-success=test (ubuntu-latest, sudo apt-get install -y libxcb-shape0-dev
       libxcb-xfixes0-dev)
@@ -24,7 +23,6 @@ pull_request_rules:
     - status-success=security-audit
     - status-success=check
     - status-success=lints
-    - status-success=version
     - status-success=test (macos-latest, echo nothing-to-install)
     - status-success=test (ubuntu-latest, sudo apt-get install -y libxcb-shape0-dev
       libxcb-xfixes0-dev)
